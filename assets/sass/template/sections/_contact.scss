@@ -1,0 +1,186 @@
+.contact-tab-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 0 0 60px 0;
+
+  .btn-img {
+    width: 120px;
+    float: left;
+    margin: 0 20px 0 0;
+  }
+
+  .btn-title {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: $title-font;
+    margin: 4px 0 0 0;
+    transition: all ease 0.4s;
+  }
+
+  .btn-text {
+    display: inline-block;
+    color: $body-color;
+    font-size: 14px;
+    font-family: $title-font;
+    margin: 2px 0 0 0;
+    transition: all ease 0.4s;
+  }
+  
+  button {
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    flex: 1;
+    text-align: left;
+    background-color: transparent;
+    border: 1px solid #F0F0F0;
+
+    &.active,
+    &:hover {
+      background-color: $theme-color;
+      border-color: transparent;
+
+      .btn-text,
+      .btn-title {
+        color: $white-color;
+      }
+    }
+  }
+
+}
+
+
+.contact-box {
+  background-color: $smoke-color;
+  padding: 60px;
+  height: 100%;
+
+  &__title {
+    margin: -0.4em 0 10px 0;
+  }
+
+  &__text {
+    margin: 0 0 37px 0;
+  }
+
+  &__item {
+    display: flex;
+    
+    &:not(:last-child) {
+      padding: 0 0 30px 0;
+      margin: 0 0 30px 0;
+      border-bottom: 1px solid #DADFEC;
+    }
+  }
+
+  &__icon {
+    font-size: 30px;
+    line-height: 1;
+    color: $theme-color;
+    align-self: flex-start;
+    margin: 0 15px 0 0;
+  }
+
+  &__label {
+    font-size: 18px;
+    margin: -0.3em 0 8px 0;
+  }
+
+  &__info {
+    max-width: 235px;
+    margin: 0 0 -0.5em 0;
+
+    a {
+      display: inline-block;
+      color: inherit;
+    }
+  }
+
+
+  &__form {
+    .form-group {
+      line-height: 1;
+    }
+    
+    textarea,
+    select,
+    input {
+      height: 55px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      background-position: right 21px center;
+    }
+
+    i {
+      top: 19px;
+      right: calc(var(--bs-gutter-x) / 2 + 24px);
+      font-size: 16px;
+    }
+  }
+
+
+
+}
+
+
+@include ml {
+  .contact-box {
+    padding: 40px;
+
+    &__title {
+      margin: -0.3em 0 10px 0;
+    }
+
+    &__form {
+      textarea,
+      select,
+      input {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .contact-tab-menu {
+    button {
+      text-align: center;
+    }
+
+    .btn-title {
+      display: block;
+    }
+    
+    .btn-img {
+      float: none;
+      margin: 0 auto 10px auto;
+      display: block;
+    }
+  }
+
+}
+
+
+@include md {
+  .contact-tab-menu {
+    .btn-title {
+      font-size: 16px;
+    }
+  }
+}
+
+@include xs {
+  .contact-box {
+    padding: 40px 20px;
+
+    &__label {
+      font-size: 16px;
+    }
+
+    &__icon {
+      font-size: 20px;
+    }
+  }
+
+}

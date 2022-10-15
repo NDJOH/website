@@ -1,0 +1,122 @@
+.vs-pagination {
+  margin-bottom: 30px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 3px;
+    list-style-type: none;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  span,
+  a {
+    display: inline-block;
+    font-family: $body-font;
+    color: $title-color;
+    text-align: center;
+    position: relative;
+    border: none;
+    width: 56px;
+    height: 56px;
+    line-height: 56px;
+    font-weight: 400;
+    font-size: 20px;
+    z-index: 1;
+    background-color: #F5F9FF;
+    border-radius: 5px;
+
+    &.active,
+    &:hover {
+      color: $white-color;
+      background-color: $theme-color;
+      box-shadow: none;
+    }
+  }
+
+}
+
+
+.post-pagination {
+  border-top: 1px solid #F0F0F0;
+  border-bottom: 1px solid #F0F0F0;
+  padding: 30px 0;
+  margin: 30px 0;
+}
+
+.post-pagi-box {
+  display: flex;
+  align-items: center;
+
+  >a {
+    color: $title-color;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: $title-font;
+
+    &:hover {
+      color: $theme-color;
+    }
+  }
+
+  img {
+    width: 80px;
+    margin-right: 25px;
+  }
+
+  &.next {
+    flex-direction: row-reverse;
+    
+    img {
+      margin-right: 0;
+      margin-left: 25px;
+    }
+  }
+}
+
+.pagi-icon {
+  color: #F0F0F0;
+  font-size: 40px;
+}
+
+
+@include sm {
+  .vs-pagination {
+    span, 
+    a {
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      font-size: 14px;
+      padding: 0 10px;
+    }
+  }
+
+  
+  .post-pagi-box{
+    >a {
+      font-size: 12px;
+    }
+    
+    img {
+      width: 40px;
+      margin-right: 15px;
+    }
+
+    &.next img {
+      margin-right: 0;
+      margin-left: 15px;
+    }
+  }
+}

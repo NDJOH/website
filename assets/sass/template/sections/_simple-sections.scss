@@ -1,0 +1,75 @@
+
+.brand-slide-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+
+  button {
+    position: relative;
+    border: none;
+    text-transform: uppercase;
+    background-color: $theme-color;
+    color: $white-color;
+    width: 50%;
+    padding: 12px 20px;
+
+    .fa-long-arrow-left {
+      margin-right: 10px;
+    }
+
+    .fa-long-arrow-right {
+      margin-left: 10px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      height: 20px;
+      width: 1px;
+      background-color: rgba(#ffffff, 0.5);
+      margin-top: -10px;
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+
+    &:hover {
+      background-color: $title-color;
+      color: $white-color;
+    }
+  }
+}
+
+
+.vs-brand1 {
+  img {
+    transition: all ease 0.4s;
+    filter: grayscale(100%) invert(0.8);
+  }
+  
+  img:hover,
+  &.slick-current img {
+    filter: grayscale(0) invert(0);
+  }
+}
+
+
+.brand-wrap1 {
+  padding: 80px 60px;
+  background-color: $theme-color;
+  text-align: center;
+  background-size: auto;
+  background-position: center center;
+}
+
+
+@include sm {
+  .brand-wrap1 {
+    padding: 60px 25px;
+  }
+}

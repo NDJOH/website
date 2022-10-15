@@ -1,0 +1,296 @@
+.comment-respond {
+  margin: var(--blog-space-y, 60px) 0 30px 0;
+  position: relative;
+
+  .form-title {
+    a#cancel-comment-reply-link {
+      font-size: .7em;
+      text-decoration: underline;
+    }
+  }
+
+  .custom-checkbox.notice {
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+
+  .row {
+    --bs-gutter-x: 20px;
+  }
+
+  .form-control {
+    background-color: $white-color;
+    border: none;
+    height: 55px;
+  }
+
+  .form-group>i {
+    top: 20.5px;
+  }
+
+  input[type=checkbox] {
+    &~label {
+      &:before {
+        background-color: $white-color;
+        border: 1px solid $white-color;
+        border-radius: 3px;
+      }
+    }
+
+    &:checked {
+      ~ label {
+        &:before {
+          background-color: $theme-color;
+          border-color: transparent;
+        }
+      }
+    }
+  }
+
+  .blog-inner-title {
+    margin-bottom: 0px;
+  }
+
+  .form-text {
+    margin-bottom: 25px;
+  }
+
+  .form-inner {
+    background-color: $smoke-color;
+    padding: 30px;
+  }
+
+  .vs-btn {
+    width: 100%;
+  }
+}
+
+.question-form,
+.review-form {
+  .comment-respond {
+    margin: 0 0 20px 0;
+  }
+
+  .form-control {
+    background-color: transparent;
+    border: 1px solid #e4e4e4;
+  }
+
+  .rating-select {
+    display: flex;
+    align-items: center;
+
+    label {
+      font-weight: 500;
+      color: $title-color;
+    }
+  }
+}
+
+.review-form {
+  display: none;
+}
+
+
+.vs-comments-wrap {
+  margin: var(--blog-space-y, 60px) 0 var(--blog-space-y, 60px) 0;
+
+  .description p:last-child {
+    margin-bottom: 0;
+  }
+
+  .comment-respond {
+    margin: 30px 0;
+  }
+
+  pre {
+    background: #ededed;
+    color: #666;
+    font-size: 14px;
+    margin: 20px 0;
+    overflow: auto;
+    padding: 20px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  blockquote {
+    background-color: #eaf8f9
+  }
+
+  li {
+    margin: 0;
+  }
+
+  .vs-post-comment {
+    border-bottom: 1px solid #F0F0F0;
+    position: relative;
+    display: flex;
+    position: relative;
+    padding: 0 0 30px 0;
+    margin: 30px 0 30px 0;
+  }
+
+  ul.comment-list {
+    list-style: none;
+    margin: -10px 0 0 0;
+    padding: 0;
+
+    ul,
+    ol {
+
+      ul,
+      ol {
+        margin-bottom: 0;
+      }
+    }
+
+  }
+
+  .comment-avater {
+    @include equal-size(110px);
+    margin-right: 25px;
+    overflow: hidden;
+    background-color: $white-color;
+    
+    img {
+      width: 100%;
+    }
+  }
+
+  .comment-content {
+    flex: 1;
+    position: relative;
+  }
+
+  .commented-on {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 3px;
+    margin-top: -0.25em;
+    font-weight: 400;
+    color: $body-color;
+    font-family: $title-font;
+
+    i {
+      margin-right: 7px;
+      font-size: 0.9rem;
+    }
+  }
+
+  .name {
+    margin-bottom: 7px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .comment-top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .text {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .children {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-left: 70px;
+  }
+
+  .reply_and_edit {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    line-height: 1;
+  }
+
+  .replay-btn {
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-block;
+    font-family: $title-font;
+    color: $theme-color;
+
+    i {
+      margin-right: 7px;
+      font-size: 0.8em;
+    }
+
+    &:hover {
+      color: $title-color;
+    }
+  }
+
+  .star-rating {
+    font-size: 12px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 80px;
+  }
+
+}
+
+
+.vs-comments-wrap.vs-comment-form {
+  margin: 0;
+}
+
+
+@include lg {
+  .vs-comments-wrap {
+    .vs-post-comment {
+      display: block;
+    }
+
+    .star-rating {
+      position: relative;
+      top: 0;
+      right: 0;
+    }
+
+    .comment-top {
+      display: block;
+    }
+
+    .comment-avater {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    .children {
+      margin-left: 40px;
+    }
+
+    .reply_and_edit {
+      position: relative;
+      top: 0;
+      margin: 15px 0 0 0;
+    }
+  }
+}
+
+
+@include sm {
+  .vs-comments-wrap {
+    .children {
+      margin-left: 20px;
+    }
+
+    .name {
+      font-size: 18px;
+    }
+  }
+
+  .comment-respond .form-inner {
+    padding: 30px 15px;
+  }
+
+  
+}

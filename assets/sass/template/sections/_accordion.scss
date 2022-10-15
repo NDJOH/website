@@ -1,0 +1,278 @@
+.accordion-style1 {
+  margin: 0 0 30px 0;
+
+  .accordion-item {
+    margin: 0 0 20px 0;
+    padding: 0 25px 0 25px;
+    background-color: $white-color;
+    box-shadow: 0px 13px 17px rgba(0, 0, 0, 0.13);
+    border-radius: 5px;
+  }
+
+  .accordion-button {
+    background-color: transparent;
+    border: none;
+    padding: 14.5px 0;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: $title-font;
+    color: $title-color;
+    text-align: left;
+
+    &:after {
+      content: '\f061';
+      font-family: $icon-font;
+      font-weight: 400;
+      color: $title-color;
+      border: none;
+      width: auto;
+      height: auto;
+      background-image: none;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:not(.collapsed) {
+      &:after {
+        transform: rotate(0);
+      }
+    }
+  }
+
+  .accordion-body {
+    border-top: 1px solid #EBEBEB;
+    padding: 17px 0 20px 0;
+
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .accordion-collapse {
+    border: none;
+  }
+
+  &.layout2 {
+    .accordion-item {
+      padding: 0;
+      box-shadow: none;
+    }
+
+    .accordion-button {
+      padding: 14.5px 25px;
+      font-size: 16px;
+      background-color: $theme-color;
+      color: $white-color;
+      border-radius: 0;
+
+      &:after {
+        color: $white-color;
+      }
+
+      &.collapsed {
+        background-color: $smoke-color;
+        color: $title-color;
+
+        &:after {
+          color: $theme-color;
+        }
+      } 
+    }
+
+    .accordion-body {
+      border: none;
+      background-color: $smoke-color;
+      padding: 25px 25px 23px 25px;
+      
+    }
+  }
+}
+
+.accordion-style2 {
+  .accordion-item {
+    margin: 0 0 20px 0;
+    padding: 0 35px 6.5px 35px;
+    background-color: $white-color;
+    box-shadow: 7.5px 12.99px 30px 0px rgba(148, 171, 255, 0.05);
+    border-radius: 30px;
+  }
+
+  .accordion-button {
+    background-color: transparent;
+    border: none;
+    padding: 24.5px 0 18px 0;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: $title-font;
+    color: $title-color;
+    text-align: left;
+
+    &:after {
+      content: '\f35a';
+      font-family: $icon-font;
+      font-weight: 400;
+      color: $title-color;
+      border: none;
+      width: auto;
+      height: auto;
+      background-image: none;
+      transform: rotate(0);
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:not(.collapsed) {
+      &:after {
+        transform: rotate(90deg);
+      }
+    }
+
+    &:hover {
+      color: $theme-color;
+    }
+  }
+
+  .accordion-body {
+    padding: 0 0 20px 0;
+
+    p {
+      font-size: 14px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .accordion-collapse {
+    border: none;
+  }
+}
+
+.faq-wrap1 {
+  padding-top: 240px;
+  padding-bottom: 90px;
+  position: relative;
+}
+
+.faq-shape1 {
+  position: absolute;
+  right: 0;
+  top: 120px;
+  bottom: 0;
+  width: 100%;
+  max-width: 1120px;
+  border-radius: 5px 0 0 5px;
+  z-index: -1;
+}
+
+.faq-shape2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 945px;
+  max-height: 570px;
+  z-index: -2;
+  border-radius: 0 5px 5px 0;
+}
+
+@include hd {
+  .faq-shape1 {
+    max-width: 60%;
+  }
+
+  .faq-shape2 {
+    max-width: 49%;
+  }
+}
+
+@include xl {
+  .faq-wrap1 {
+    padding-top: var(--section-space, 120px);
+    padding-bottom: calc(var(--section-space, 120px) - 30px);
+  }
+
+  .faq-shape2 {
+    max-height: initial;
+    bottom: 0;
+    display: none;
+  }
+
+  .faq-shape1 {
+    max-width: 70%;
+    top: 0;
+  }
+}
+
+@include ml {
+  .faq-wrap1 {
+    padding-top: var(--section-space, 120px);
+  }
+
+  .faq-shape2 {
+    max-height: initial;
+    bottom: 0;
+    display: none;
+  }
+
+  .faq-shape1 {
+    max-width: 70%;
+    top: 0;
+  }
+
+  .accordion-style1 {
+    .accordion-button {
+      font-size: 16px;
+    }
+
+    .accordion-body {
+      font-size: 14px;
+    }
+  }
+}
+
+
+@include md {
+  .faq-wrap1 {
+    padding-top: var(--section-space-mobile, 80px);
+    padding-bottom: calc(var(--section-space-mobile, 80px) - 30px);
+  }
+
+  .faq-shape1 {
+    max-width: 100%;
+  }
+
+}
+
+@include sm {
+  .accordion-style1 {
+    .accordion-item {
+      padding: 0 20px 0px 20px;
+    }
+
+    &.layout2 {
+      .accordion-button {
+        padding: 14.5px 20px;
+        font-size: 16px;
+      }
+
+      .accordion-body {
+        padding: 25px 20px 23px 20px;
+      }
+    }
+  }
+
+  .accordion-style2 {
+    .accordion-item {
+      padding: 0 30px 6.5px 30px;
+    }
+  }
+}

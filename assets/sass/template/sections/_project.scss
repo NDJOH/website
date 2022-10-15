@@ -1,0 +1,506 @@
+.filter-menu1 {
+  background-color: $white-color;
+  position: relative;
+  width: max-content;
+  margin: 0 auto 50px auto;
+  max-width: 100%;
+  border-radius: 9999px;
+  text-align: center;
+  padding: 15px 60px;
+  box-shadow: 7.5px 12.99px 60px 0px rgba(9, 34, 126, 0.07);
+
+  // &:before {
+  //   content: '';
+  //   position: absolute;
+  //   left: -9px;
+  //   right: -9px;
+  //   top: 13px;
+  //   height: 100%;
+  //   border: 2px solid #f0f2f8;
+  //   border-radius: inherit;
+  //   z-index: -1;
+  // }
+
+  button {
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 500;
+    display: inline-block;
+    position: relative;
+    padding: 17px 31px;
+    border-radius: 9999px;
+
+    // &:before {
+    //   content: '';
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 0;
+    //   width: 1px;
+    //   height: 24px;
+    //   margin-top: -12px;
+    //   background-color: #929292;
+    //   transition: all ease 0.4s;
+    // }
+
+    &:hover {
+      color: $theme-color;
+    }
+
+    // &.active::before,
+    // &.active+button::before,
+    // &:first-child::before {
+    //   opacity: 0;
+    //   visibility: hidden;
+    // }
+
+    &.active {
+      background-color: $theme-color;
+      color: $white-color;
+    }
+  }
+}
+
+
+.project-style1 {
+  background-color: $white-color;
+  box-shadow: 0px 10px 31px rgba(169, 177, 193, 0.17);
+  border-radius: 5px;
+  margin: 0 0 30px 0;
+
+  .project-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transform: scale(1.1);
+      background-color: $theme-color;
+      opacity: 0;
+      visibility: hidden;
+      transition: all ease 0.4s;
+      z-index: 1;
+    }
+
+    img {
+      transition: all ease 0.4s;
+      transform: scale(1);
+    }
+  }
+
+  .project-content {
+    padding: 25px 30px 30px 30px;
+  }
+
+  
+  &:hover {
+    .vs-btn.style3 {
+      background-color: $theme-color;
+      color: $white-color;
+    }
+
+    .project-img {
+      &:before {
+        transform: scale(1);
+        opacity: 0.5;
+        visibility: visible;
+      }
+
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.slick-slide .project-style1 {
+  box-shadow: 0px 10px 21px rgba(169, 177, 193, 0.15);
+}
+
+.project-style2 {
+  position: relative;
+  margin: 0 0 30px 0;
+
+  .project-img {
+    overflow: hidden;
+    position: relative;
+
+    img {
+      transition: all ease 0.4s;
+      transform: scale(1);
+      width: 100%;
+    }
+  }
+
+  .project-shape {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    background-color: $theme-color;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease 0.4s;
+  }
+
+  .icon-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    background-color: $white-color;
+    color: $theme-color;
+    opacity: 0;
+    visibility: hidden;
+
+    &:hover {
+      background-color: $title-color;
+      color: $white-color;
+    }
+  }
+
+  .project-title {
+    color: $white-color;
+    margin: 0;
+  }
+
+  .project-label {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: $title-font;
+    color: $white-color;
+    display: block;
+    margin: 0 0 5px 0;
+  }
+
+  .project-label,
+  .project-title {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-50px);
+    transition: all ease 0.4s;
+  }
+
+  .project-content {
+    position: absolute;
+    left: 70px;
+    bottom: 60px;
+    z-index: 3;
+  }
+
+  &:hover {
+    .project-shape {
+      opacity: 0.80;
+      visibility: visible;
+    }
+
+    .project-img {
+      img {
+        transform: scale(1.1);
+      }
+    }
+
+    .icon-btn {
+      opacity: 1;
+      visibility: visible;
+      transition-delay: 0.2s;
+    }
+
+    .project-title,
+    .project-label {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      transition-delay: 0.1s;
+    }
+
+    .icon-btn,
+    .project-label {
+      transition-delay: 0.2s;
+    }
+  }
+
+}
+
+.project-box {
+  background-color: $smoke-color;
+  padding: 45px 40px;
+  margin: 0 0 30px 0;
+
+  &__title {
+    margin: -0.3em 0 25px 0;
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: $white-color;
+    text-align: center;
+    color: $theme-color;
+    margin: 0 20px 0 0;
+    font-size: 18px;
+    border-radius: 50%;
+  }
+
+  &__label {
+    font-size: 14px;
+    display: block;
+    margin: 0 0 10px 0;
+    line-height: 1;
+  }
+
+  &__info {
+    font-size: 16px;
+    font-weight: 600;
+    color: $theme-color;
+    margin: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #DADFEC;
+      margin: 0 0 30px 0;
+      padding: 0 0 30px 0;
+    }
+  }
+
+
+}
+
+
+.project-contact {
+  background-color: $theme-color;
+  padding: 32px 40px 20px 40px;
+  
+  &__title {
+    color: $white-color;
+    margin: 0 0 10px 0;
+  }
+
+  &__text {
+    color: $white-color;
+    margin: 0 0 22px 0;
+  }
+
+  &__info {
+    color: $white-color;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    margin: 0 0 10px 0;
+    padding: 0 0 0 33px;
+
+    a {
+      color: inherit;
+    }
+
+    i {
+      margin: 0 15px 0 0;
+      position: absolute;
+      left: 0;
+      top: 3.5px;
+    }
+  }
+}
+
+.project-style3 {
+  position: relative;
+  margin-bottom: 30px;
+
+  .project-img {
+    overflow: hidden;
+    border-radius: 10px;
+
+    img {
+      transform: scale(1);
+      transition: all ease 0.4s;
+      width: 100%;
+    }
+  }
+  
+  .project-bottom {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: $theme-color;
+    border-radius: 10px;
+    transition: all ease 0.4s;
+    padding: 30px 35px 28px 35px;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .icon-btn,
+  .project-category,
+  .project-title {
+    transform: translateY(10px);
+    transition: all ease 0.4s;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .project-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: $white-color;
+    margin: 0 0 2px 0;
+  }
+
+  .project-category {
+    font-size: 16px;
+    color: #7c98ff;
+    margin: 0;
+  }
+
+  .icon-btn {
+    --btn-size: 40px;
+    --btn-font-size: 16px;
+    transform: translateX(10px);
+  }
+
+  &:hover {
+    .project-bottom {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .icon-btn,
+    .project-title,
+    .project-category {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      transition-delay: 0.1s;
+    }
+
+    .icon-btn {
+      transition-delay: 0.15s;
+    }
+
+    .project-category {
+      transition-delay: 0.2s;
+    }
+
+    .project-img {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+
+}
+
+@include xl {
+  .project-style2 {
+    .icon-btn {
+      top: 60px;
+      right: 60px;
+      left: auto;
+      transform: none;
+      --btn-size: 40px;
+      --btn-font-size: 18px;
+    }
+  }
+}
+
+
+@include ml {
+  .project-box {
+    padding: 35px 25px;
+  }
+
+  .project-contact {
+    padding: 32px 25px 20px 25px;
+  }
+
+  .project-style1 {
+    .project-img {
+      img {
+        width: 100%;
+      }
+    }
+
+    .project-content {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+
+  .project-style3 {
+    .project-bottom {
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      padding: 20px 20px 20px 20px;
+      gap: 15px;
+    }
+
+    .project-title {
+      font-size: 18px;
+    }
+  }
+}
+
+
+@include md {
+  .project-style2 {
+    .project-shape {
+      right: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+    }
+    
+    .project-content {
+      left: 20px;
+      bottom: 20px;
+    }
+
+    .icon-btn {
+      top: 20px;
+      right: 20px;
+    }
+  }
+}
+
+@include sm {
+  .filter-menu1 {
+    padding: 15px 15px;
+    border-radius: 10px;
+
+    button {
+      font-size: 14px;
+      padding: 15px 22px;
+    }
+  }
+}
+
+@include xs {
+  .project-style1 {
+    .project-content {
+      padding: 25px 20px 30px 20px;
+    }
+  }
+}

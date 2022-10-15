@@ -1,0 +1,34 @@
+.error-number {
+  font-size: 274px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 3px;
+  margin-top: -0.1em;
+}
+
+.error-title {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.error-text {
+  max-width: 600px;
+  margin: 0 auto 32px auto;
+}
+
+
+@include md {
+  .error-number {
+    font-size: 200px;
+  }
+
+  .error-title {
+    font-size: 20px;
+  }
+}
+
+@include sm {
+  .error-number {
+    font-size: 110px;
+  }
+}

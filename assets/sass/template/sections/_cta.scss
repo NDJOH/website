@@ -1,0 +1,89 @@
+@media (min-width: $xl) {
+  .cta-wrap1 {
+    // max-width: 1680px;
+    margin-left: 110px;
+    margin-right: 110px;
+  }
+}
+
+.cta-wrap2 {
+  background-color: $theme-color;
+  padding: 80px;
+}
+
+.cta-title1 {
+  margin-bottom: -1rem;
+  color: $white-color;
+}
+
+.cta-style1 {
+  background-color: $theme-color;
+  padding: 94px 0 90px 0;
+  text-align: center;
+  
+  .vs-btn,
+  .cta-title,
+  .cta-title2 {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .cta-title {
+    color: $white-color;
+    font-size: 60px;
+    line-height: 1;
+    margin: 0 0 8px 0;
+  }
+
+  .cta-title2 {
+    color: $white-color;
+  }
+
+  &.bg-center {
+    background-position: center center;
+    background-size: auto;
+  }
+}
+
+.cta-wrap3 {
+  padding-bottom: $space;
+
+  @media (min-width: $lg) {
+    margin-bottom: -192px;
+    padding-bottom: 0;
+  }
+}
+
+@include xl {
+  .cta-wrap2 {
+    padding: 60px;
+  }
+}
+
+@include ml {
+  .cta-wrap2 {
+    padding: 45px;
+  }
+}
+
+@include lg {
+  .cta-title1 {
+    margin-bottom: -0.7rem;
+  }
+}
+
+@include md {
+  .cta-title1 {
+    margin: -.5em 0 30px 0;
+  }
+
+  .cta-wrap3 {
+    padding-bottom: $space-mobile;
+  }
+}
+
+@include sm {
+  .cta-wrap2 {
+    padding: 45px 20px;
+  }
+}
