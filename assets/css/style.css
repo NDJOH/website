@@ -96,7 +96,7 @@ Version: 1.0.0
 
 .home-five,
 .home-four {
-  --theme-color: #0037ff;
+  --theme-color: rgba(14, 242, 231, 0.973);
   --smoke-color: #f6f7fc;
 }
 
@@ -4285,6 +4285,11 @@ a.text-theme:hover,
 }
 .header-social.style-white a:hover {
   color: var(--title-color);
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
 }
 
 .logo-style1 {
